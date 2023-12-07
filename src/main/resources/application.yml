@@ -1,0 +1,11 @@
+server:
+  port : 8888
+  servlet:
+    context-path: /s3transit
+spring:
+  config:
+    aws:
+      accessKeyId: ${AWS_ACCESS_KEY_ID}
+      secretKey: ${AWS_SECRET_KEY}
+      region: ${AWS_REGION}
+      bucketName: ${AWS_BUCKET_NAME}
