@@ -25,7 +25,7 @@ Antes de começar, certifique-se de ter instalado o Docker em sua máquina.
 1. Abra o arquivo `application.yml` e ajuste as configurações conforme necessário para o seu ambiente.
 
 ```yaml
-# Exemplo de Configuração
+# Exemplo de Configuração, para variaveis de ambiente basta colocar o nome da variavel entre ${NOME}
 aws:
   access-key: SUA_CHAVE_DE_ACESSO_AWS
   secret-key: SUA_CHAVE_SECRETA_AWS
@@ -43,13 +43,13 @@ s3:
 2. Construa a imagem Docker:
 
 ```bash
-docker build -t nome-do-servico-s3 .
+docker build -t s3transit .
 ```
 
 3. Execute o contêiner:
 
 ```bash
-docker run -d nome-do-servico-s3
+docker run -d s3transit
 ```
 
 Isso é tudo! Seu serviço de envio para o S3 estará em execução e pronto para receber arquivos.
